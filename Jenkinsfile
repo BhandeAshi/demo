@@ -7,7 +7,7 @@ pipeline {
               sh '''
               git clone https://github.com/BhandeAshi/demo.git
         
-        '''  
+        ''' 
             }
         }
         stage('build') {
@@ -44,4 +44,3 @@ pipeline {
         }
         
         }
-}
