@@ -1,13 +1,13 @@
 pipeline {
     agent any
-    }
+
     stages {
         stage('git commit') {
             steps {
               sh '''
               git clone https://github.com/BhandeAshi/demo.git
         
-        ''' 
+        '''  
             }
         }
         stage('build') {
@@ -43,4 +43,7 @@ pipeline {
             }
         }
         
-        }
+    }
+}    
+
+
