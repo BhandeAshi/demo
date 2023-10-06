@@ -14,7 +14,7 @@ pipeline {
             steps {
                 sh '''
                sudo apt install maven -y
-               cd /home/ubuntu/workspace/project/studentapp-ui/
+               cd /home/ubuntu/workspace/project/pipeline/
                mvn clean
                mvn package
                 '''
@@ -34,7 +34,7 @@ pipeline {
               cd /mnt
               sudo apt install unzip -y
               sudo unzip apache-tomcat-8.5.93.zip
-              sudo cp  /home/ubuntu/workspace/project/studentapp-ui/target/studentapp-2.2-SNAPSHOT.war /mnt/apache-tomcat-8.5.93/webapps/
+              sudo cp  /home/ubuntu/workspace/project/pipeline/target/studentapp-2.2-SNAPSHOT.war /mnt/apache-tomcat-8.5.93/webapps/
               sudo mv /mnt/apache-tomcat-8.5.93/webapps/studentapp-2.2-SNAPSHOT.war /mnt/apache-tomcat-8.5.93/webapps/studentapp.war
               sudo chmod -R +x /mnt/apache-tomcat-8.5.93/bin/
               cd /mnt/apache-tomcat-8.5.93/bin/
