@@ -1,7 +1,7 @@
 pipeline {
     agent {
         node {
-            label 'label1
+            label 'node1'
         }
 
     }
@@ -9,7 +9,7 @@ pipeline {
         stage('git commit') {
             steps {
               sh '''
-              git clone https://github.com/1hrishi9/studentapp-ui.git
+              git clone https://github.com/BhandeAshi/demo.git
         
         '''  
             }
