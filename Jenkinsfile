@@ -13,12 +13,9 @@ pipeline {
         stage('build') {
             steps {
                 sh '''
-                apt-get update -y
-                apt install maven -y
+                mvn clean install
                 cd /home/ubuntu/workspace/project1/demo/
-                mvn clean
-                mvn package
-                  '''
+                   '''
             }
         }
         stage('test') {
