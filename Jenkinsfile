@@ -13,7 +13,7 @@ pipeline {
         stage('build') {
             steps {
                 sh '''
-                cd /home/ubuntu/workspace/project1/demo/
+                sudo cd /home/ubuntu/workspace/project1/demo/
                 mvn clean install
                    '''
             }
