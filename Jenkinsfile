@@ -13,11 +13,12 @@ pipeline {
         stage('build') {
             steps {
                 sh '''
-               sudo apt install maven -y
-               cd /home/ubuntu/workspace/project/pipeline/
-               mvn clean
-               mvn package
-                '''
+                sudo apt-get update -y
+                sudo apt install maven -y
+                sudo cd /home/ubuntu/workspace/project1/demo/
+                sudo mvn clean
+                sudo mvn package
+                 '''
             }
         }
         stage('test') {
